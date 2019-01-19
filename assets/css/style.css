@@ -24,6 +24,7 @@ body {
     font-weight: 900;
     font-size: 8em;
     text-shadow: rgb(85, 85, 85) 0px 2px 3px;
+    text-align: center;
 }
 
 .links {
