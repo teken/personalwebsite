@@ -5,34 +5,91 @@
         </title>
 		<meta charset="UTF-8">
         <meta name="description" content="Duncan Haig's Personal Page">
-        <meta name="keywords" content="duncan,haig,duncanhaig">
+        <meta name="keywords" content="duncan,haig,duncanhaig,audiobook,player,audiobookplayer,haste,cloud,hastecloud,docs,hastedocs,marble,network,marblenetwork">
         <meta name="author" content="Duncan Haig">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="assets/images/icon.ico">
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script async src="assets/js/app.js"></script>
     </head>
     <body>
-        <div class="title">
-            <p>
-                    Duncan Haig
-            </p>
-        </div>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/duncan-haig">
-                LinkedIn
-            </a>
-            <a href="https://github.com/teken">
-                GitHub
-            </a>
-            <a href="https://bitbucket.org/Teken">
-                BitBucket
-            </a>
-            <a href="mailto:contact@duncanhaig.com">
-                Email
-            </a>
-        </div>
+        <section class="home">
+            <div class="title">
+                <p>
+                        Duncan Haig
+                </p>
+            </div>
+            <div class="links">
+                <a href="#projects">
+                    Projects
+                </a>
+                <!--<a href="#cv">-->
+                    <!--CV-->
+                <!--</a>-->
+                <hr class="separator"/>
+                <a href="https://www.linkedin.com/in/duncan-haig">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/teken">
+                    GitHub
+                </a>
+                <a href="mailto:contact@duncanhaig.com">
+                    Email
+                </a>
+            </div>
+        </section>
+        <section id="projects" class="clickable">
+            <div class="links">
+                <a href="#abp">
+                    Audio Book Player
+                </a>
+                <a href="#mn">
+                    Marble Network
+                </a>
+                <a href="#hc">
+                    Haste Cloud
+                </a>
+                <a href="#hd">
+                    Haste Docs
+                </a>
+            </div>
+            <div class="descriptions">
+                <div id="abp" class="active">
+                    <h1>Audio Book Player</h1>
+                    <h4>(<a href="https://audiobookplayer.app/">audiobookplayer.app</a>)</h4>
+                    <p>
+                        A project to aimed to provide the best experience for listening to and managing audiobooks across all of your devices.
+                    <p>
+                        Features including time-code synchronisation, library
+                        functionality, and P2P file transfer of your books.
+
+                </div>
+                <div id="mn">
+                    <h1>Marble Network</h1>
+                    <h4>(<a href="https://marble.network">marble.network</a>)</h4>
+                    <p>
+                        A modern, vertically scalable docker Minecraft network solution with multiple example plugins and APIs.
+                    </p>
+                </div>
+                <div id="hc">
+                    <h1>Haste Cloud</h1>
+                    <h4>(<a href="https://haste.cloud/">haste.cloud</a>)</h4>
+                    <p>
+                        Bring a fresh and powerful approach to video gaming networking, aiming to give any developer the power of cloud gaming.
+                </div>
+                <div id="hd">
+                    <h1>Haste Docs</h1>
+                    <h4>(<a href="https://hastedocs.com/">hastedocs.com</a>)</h4>
+                    <p>
+                        A service that aims to provide a super easy and customisable method of creating documentation. It leverages the power of git to provide the questest method of getting first class documentation to your users and developers.
+
+                </div>
+            </div>
+        </section>
+        <!--<section id="cv">-->
+            <!--<div></div>-->
+            <!--<div></div>-->
+        <!--</section>-->
     </body>
 </html>

@@ -1,35 +1,67 @@
-/*@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700')*/
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 html, body {
+    --black: #1D1C1C;
+    --light-black: #292828;
+    --white: #E6E6E8;
+    --dark-white: #D0D0D0;
+
     font-family: 'Montserrat', sans-serif;
-    background-color: #E6E6E8; /*1E1E1E*/
-    color: #1D1C1C; /*BDBDBD*/
+    /*background-color: var(--black);*/
+    background-image: linear-gradient(to right, var(--black) 0 50%, var(--white) 50% 100%);
+    color: var(--white);
     letter-spacing: 0.01em;
     margin: 0;
+    overflow-y: hidden;
 }
 
-body {
+a, a:hover, a:active, a:visited {
+    color: inherit;
+}
+
+section {
     display: grid;
-    grid-template-rows: 1fr .1fr;
+    grid-template-columns: 1fr 600px 600px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sp odd even sp1";
     height: 100vh;
 }
 
-.title {
+section > div:nth-child(odd) {
+    grid-area: odd;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+section > div:nth-child(even) {
+    grid-area: even;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+section > div.links:nth-child(odd) a:hover {
+    background-color: var(--light-black);
+}
+
+section > div.links:nth-child(even) a:hover {
+    background-color: var(--dark-white);
+}
+
+.home .title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title p {
+.home .title p {
     font-weight: 900;
     font-size: 8em;
-    text-shadow: rgb(85, 85, 85) 0px 2px 3px;
     text-align: center;
 }
 
 .links {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -41,8 +73,42 @@ body {
     font-weight: 600;
     font-size: 1.1em;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.links a:hover {
-    background-color: #D0D0D0; /*333333*/
+.links .separator{
+    border: 1px solid var(--black);
+    width: 2rem;
+}
+
+.clickable .descriptions > div:not(.active) {
+    display: none;
+}
+
+.descriptions {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descriptions p {
+    padding: 0 2rem;
+}
+
+@media screen and (orientation: portrait)  {
+    body {
+        background-image: linear-gradient(to bottom, var(--black) 0 50%, var(--white) 50% 100%);
+    }
+
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "odd" "even";
+    }
+
+    .home .title p {
+        font-weight: 900;
+        font-size: 5em;
+    }
 }
